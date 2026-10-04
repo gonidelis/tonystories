@@ -144,8 +144,8 @@ nav a:hover { text-decoration: underline; }
 .film > div { min-width: 0; }
 
 .poster {
-  aspect-ratio: 1.15;
-  background: var(--wine);
+  aspect-ratio: 4 / 5;
+  background: var(--wine) url("poster.jpg") center 35% / cover;
   color: var(--paper);
   padding: 35px;
   position: relative;
@@ -160,15 +160,17 @@ nav a:hover { text-decoration: underline; }
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent 0,
-    transparent 49px,
-    #f4f0e710 50px,
-    #f4f0e710 51px
+  background: linear-gradient(
+    180deg,
+    #1a0f0ed0 0%,
+    #1a0f0e40 40%,
+    #1a0f0e30 60%,
+    #1a0f0ee0 100%
   );
   pointer-events: none;
 }
+
+.poster > * { position: relative; }
 
 .poster-title {
   font: normal clamp(45px, 5vw, 70px)/.99 Georgia, serif;
